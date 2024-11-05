@@ -10,6 +10,7 @@ import NavBar from "./components/navbar.js";
 import '../index.css';
 import Projects from "./components/projects.js";
 import {Footer} from "./components/footer.js";
+import PhoneIOT from "./components/phoneiot.js";
 
 const defaultUser = {
   username: '',
@@ -42,6 +43,7 @@ const MyApp = () => {
       <Routes>
         <Route exact path="/" element={<LandingPage />} />
         <Route path="/projects" element={<Projects />} />
+        <Route path="/phoneiot" element={<PhoneIOT />} />
       </Routes>
       <Footer />
     </BrowserRouter>
