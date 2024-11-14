@@ -47,10 +47,9 @@ const mapProjects = [
 ];
 
 export default function Projects() {
-    const [isDark, setIsDark] = useState(false);
 
     return (
-        <div className={isDark ? "dark" : ""}>
+        <div>
             <div className="min-h-screen bg-gradient-to-b from-white to-blue-50 dark:from-slate-900 dark:to-slate-800">
                 <main className="container mx-auto px-4 py-12">
                     <h1 className="text-4xl font-bold mb-8 text-center text-blue-600 dark:text-white">Projects</h1>
@@ -66,7 +65,6 @@ export default function Projects() {
                         </button>
                     </div>
 
-                    {/* Featured Projects */}
                     <section className="mb-16">
                         <h2 className="text-3xl font-bold mb-8 text-blue-600 dark:text-white">Featured Projects</h2>
                         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -98,7 +96,6 @@ export default function Projects() {
                         </div>
                     </section>
 
-                    {/* Google Maps Projects */}
                     <section>
                         <h2 className="text-3xl font-bold mb-8 text-blue-600 dark:text-white">Projects using Google Maps</h2>
                         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">

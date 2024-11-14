@@ -9,7 +9,7 @@ const taglines = [
     { text: "Multi-Player Games", image: "/images/multi_player_games.jpeg?height=600&width=1200", link: "/multiplayer" , buttonText: "Start Playing" },
     { text: "Together", image: "/images/together_background.jpeg?height=600&width=1200", link: "/editor", buttonText: "Start Creating: NetsBlox Editor" },
     { text: "with AI", image: "/images/AI.jpeg?height=600&width=1200", link: "/editor", buttonText: "Start Creating: NetsBlox Editor" },
-    { text: "with Blocks or Text", image: "/images/block_based.jpeg?height=600&width=1200", link: "/coding" , buttonText: "Get Started: PyBlox"},
+    { text: "with Blocks or Text", image: "/images/block_based.jpeg?height=600&width=1200", link: "/pyblox" , buttonText: "Get Started: PyBlox"},
     { text: "Online programs", image: "/images/robot_on_laptop.jpeg?height=600&width=1200", link: "/editor", buttonText: "Start Creating: NetsBlox Editor"},
 ]
 
@@ -93,26 +93,7 @@ export default function LandingPage() {
                             style={{ aspectRatio: '16 / 7' }}
                         />
                     </div>
-                    {/*<div className="relative h-64 w-full bg-gray-200 dark:bg-gray-800 rounded-lg overflow-hidden mb-8">*/}
-                    {/*    <div className="absolute inset-0 bg-cover bg-center"*/}
-                    {/*         style={{backgroundImage: 'url(/images/netsblox-logo-bluetransp.png)'}}>*/}
-                    {/*        <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">*/}
-                    {/*            <button className="bg-white text-black p-2 rounded-full">*/}
-                    {/*                <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">*/}
-                    {/*                    <path d="M8 5v14l11-7z"/>*/}
-                    {/*                </svg>*/}
-                    {/*            </button>*/}
-                    {/*        </div>*/}
-                    {/*    </div>*/}
-                    {/*</div>*/}
-                    {/*<motion.h1*/}
-                    {/*    initial={{ y: -50, opacity: 0 }}*/}
-                    {/*    animate={{ y: 0, opacity: 1 }}*/}
-                    {/*    transition={{ duration: 0.5 }}*/}
-                    {/*    className="text-5xl md:text-6xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 dark:from-blue-400 dark:via-blue-500 dark:to-blue-600"*/}
-                    {/*>*/}
-                    {/*    Innovate with Code*/}
-                    {/*</motion.h1>*/}
+
                     <motion.p
                         initial={{y: 50, opacity: 0}}
                         animate={{y: 0, opacity: 1}}
@@ -132,7 +113,6 @@ export default function LandingPage() {
                     </motion.button>
                 </div>
 
-                {/* Remaining sections with features, testimonials, and projects */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
                     {features.map((feature, index) => (
                         <motion.div

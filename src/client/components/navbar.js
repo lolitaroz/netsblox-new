@@ -3,9 +3,10 @@ import { Sun, Moon, Menu, X, ChevronDown } from 'lucide-react';
 
 const navItems = [
   { name: 'Home', href: '/' },
-  { name: 'Start Coding', href: '/code' },
   { name: 'Learn', href: '/learn' },
   { name: 'Teach', href: '/curriculum' },
+  { name: 'Multiplayer', href: '/multiplayer' },
+  { name: 'Projects', href: '/projects' },
   { name: 'Tools', href: '/tools', submenu: [
     { name: 'PhoneIoT', href: '/phoneiot' },
     { name: 'RoboScape', href: '/roboscape' },
@@ -13,7 +14,7 @@ const navItems = [
     { name: 'Extensions', href: '/extensions' },
     { name: 'PyBlox', href: '/pyblox' },
   ] },
-    { name: 'Editor', href: '/editor'},
+    { name: 'Editor', href: 'https://editor.netsblox.org/?' },
   { name: 'Contact', href: '/contact' },
 ];
 
@@ -60,7 +61,10 @@ const Navbar = ({ darkMode, setDarkMode }) => {
               </div>
             ))}
             <button
-              onClick={() => setDarkMode(!darkMode)}
+              onClick={() => {
+                localStorage.setItem('darkMode', !darkMode);
+                setDarkMode(!darkMode)
+              }}
               className="p-2 rounded-full bg-gradient-to-r from-blue-100 to-blue-200 dark:from-gray-700 dark:to-gray-600 text-blue-500 dark:text-blue-400 transition-colors"
               aria-label={darkMode ? "Switch to light mode" : "Switch to dark mode"}
             >
