@@ -1,15 +1,15 @@
 /* Copyright G. Hemingway, @2024 - All rights reserved */
-'use strict';
+"use strict";
 
-import React, { useState, useEffect } from 'react';
-import { createRoot } from 'react-dom/client';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import React, { useState, useEffect } from "react";
+import { createRoot } from "react-dom/client";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 import LandingPage from "./components/landing_page.js";
 import NavBar from "./components/navbar.js";
-import '../index.css';
+import "../index.css";
 import Projects from "./components/projects.js";
-import {Footer} from "./components/footer.js";
+import { Footer } from "./components/footer.js";
 import PhoneIOT from "./components/phoneiot.js";
 import CurriculumPage from "./components/curriculum_page.js";
 import MultiplayerPage from "./components/multiplayer.js";
@@ -18,7 +18,6 @@ import RoboScapePage from "./components/roboscape.js";
 import LearnPage from "./components/learn_page.js";
 import Beatblox from "./components/beatblox.js";
 
-
 /***
  * Main application entry point
  * @returns {JSX.Element}
@@ -26,21 +25,21 @@ import Beatblox from "./components/beatblox.js";
  */
 const MyApp = () => {
   const [darkMode, setDarkMode] = useState(() => {
-    const saved = localStorage.getItem('darkMode');
+    const saved = localStorage.getItem("darkMode");
     return saved ? JSON.parse(saved) : false;
   });
 
   useEffect(() => {
     if (darkMode) {
-      document.documentElement.classList.add('dark');
+      document.documentElement.classList.add("dark");
     } else {
-      document.documentElement.classList.remove('dark');
+      document.documentElement.classList.remove("dark");
     }
   }, [darkMode]);
 
   return (
     <BrowserRouter>
-      <NavBar darkMode={darkMode} setDarkMode={setDarkMode}/>
+      <NavBar darkMode={darkMode} setDarkMode={setDarkMode} />
       <Routes>
         <Route exact path="/" element={<LandingPage />} />
         <Route path="/projects" element={<Projects />} />
@@ -58,5 +57,5 @@ const MyApp = () => {
   );
 };
 
-const root = createRoot(document.getElementById('mainDiv'));
+const root = createRoot(document.getElementById("mainDiv"));
 root.render(<MyApp />);

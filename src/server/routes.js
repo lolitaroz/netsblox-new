@@ -1,14 +1,14 @@
 /* Copyright G. Hemingway, @2024 - All rights reserved */
-'use strict';
+"use strict";
 
-import _ from 'underscore';
-import { initialState, shuffleCards } from './solitaire.js';
+import _ from "underscore";
+import { initialState, shuffleCards } from "./solitaire.js";
 
 export default async (app) => {
   // Handle POST to create a user session (i.e. log on)
-  app.post('/v1/session', (req, res) => {
+  app.post("/v1/session", (req, res) => {
     if (!req.body || !req.body.username || !req.body.password) {
-      res.status(400).send({ error: 'username and password required' });
+      res.status(400).send({ error: "username and password required" });
     } else {
       let user = _.findWhere(app.users, {
         username: req.body.username.toLowerCase(),
@@ -22,7 +22,7 @@ export default async (app) => {
               (user) => user.username,
             )}]`,
           );
-        res.status(401).send({ error: 'unauthorized' });
+        res.status(401).send({ error: "unauthorized" });
       } else {
         res.status(201).send({
           username: user.username,
@@ -33,7 +33,7 @@ export default async (app) => {
   });
 
   // Handle POST to create a new user account
-  app.post('/v1/user', (req, res) => {
+  app.post("/v1/user", (req, res) => {
     let data = req.body;
     if (
       !data ||
@@ -46,23 +46,23 @@ export default async (app) => {
     ) {
       res.status(400).send({
         error:
-          'username, password, first_name, last_name, city and primary_email required',
+          "username, password, first_name, last_name, city and primary_email required",
       });
     } else {
       let user = _.findWhere(app.users, {
         username: data.username.toLowerCase(),
       });
       if (user) {
-        res.status(400).send({ error: 'username already in use' });
+        res.status(400).send({ error: "username already in use" });
       } else {
         let newUser = _.pick(
           data,
-          'username',
-          'first_name',
-          'last_name',
-          'password',
-          'city',
-          'primary_email',
+          "username",
+          "first_name",
+          "last_name",
+          "password",
+          "city",
+          "primary_email",
         );
         app.users.push(newUser);
         res.status(201).send({
@@ -74,20 +74,20 @@ export default async (app) => {
   });
 
   // Handle GET to fetch user information
-  app.get('/v1/user/:username', (req, res) => {
+  app.get("/v1/user/:username", (req, res) => {
     let user = _.findWhere(app.users, {
       username: req.params.username.toLowerCase(),
     });
     if (!user) {
-      res.status(404).send({ error: 'unknown user' });
+      res.status(404).send({ error: "unknown user" });
     } else {
       user = _.pick(
         user,
-        'username',
-        'first_name',
-        'last_name',
-        'city',
-        'primary_email',
+        "username",
+        "first_name",
+        "last_name",
+        "city",
+        "primary_email",
       );
       user.games = app.games.map((game) => {
         let g = _.clone(game);
@@ -99,12 +99,12 @@ export default async (app) => {
   });
 
   // Handle POST to create a new game
-  app.post('/v1/game', (req, res) => {
+  app.post("/v1/game", (req, res) => {
     let data = req.body;
     if (!data || !data.game || !data.color) {
-      res.status(400).send({ error: 'game and color fields required' });
+      res.status(400).send({ error: "game and color fields required" });
     } else {
-      if (data.game === 'klondike') {
+      if (data.game === "klondike") {
         let newGame = {
           active: true,
           cards_remaining: 52,
@@ -113,7 +113,7 @@ export default async (app) => {
           game: data.game,
           score: 0,
           start: Date.now(),
-          winner: '',
+          winner: "",
           moves: [],
         };
 
@@ -123,25 +123,25 @@ export default async (app) => {
         res.status(201).send({
           id: newGame.id,
         });
-      } else res.status(404).send({ error: 'Not implemented' });
+      } else res.status(404).send({ error: "Not implemented" });
     }
   });
 
   // Handle GET to fetch game information
-  app.get('/v1/game/:id', (req, res) => {
+  app.get("/v1/game/:id", (req, res) => {
     let game = _.findWhere(app.games, { id: req.params.id.toLowerCase() });
     if (!game) {
-      res.status(404).send({ error: 'unknown game id' });
+      res.status(404).send({ error: "unknown game id" });
     } else {
       res.status(200).send(game);
     }
   });
 
   // Provide end-point to request shuffled deck of cards and initial state - for testing
-  app.get('/v1/cards/shuffle', (req, res) => {
+  app.get("/v1/cards/shuffle", (req, res) => {
     res.send(shuffleCards(false));
   });
-  app.get('/v1/cards/initial', (req, res) => {
+  app.get("/v1/cards/initial", (req, res) => {
     res.send(initialState());
   });
 };

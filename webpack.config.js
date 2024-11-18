@@ -13,19 +13,19 @@ export default {
   devtool: "eval-source-map",
   output: {
     filename: "[name].js",
-    path: path.resolve(__dirname, "public/js")
+    path: path.resolve(__dirname, "public/js"),
   },
   module: {
     rules: [
       {
         test: /\.css$/,
-        use: ['style-loader', 'css-loader'],
+        use: ["style-loader", "css-loader"],
       },
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        use: "babel-loader"
-      }
-    ]
-  }
+        use: "babel-loader",
+      },
+    ],
+  },
 };

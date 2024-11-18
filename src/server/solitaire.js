@@ -1,9 +1,9 @@
 /* Copyright G. Hemingway, @2024 - All rights reserved */
-'use strict';
+"use strict";
 
 export const shuffleCards = (includeJokers = false) => {
-  const suits = ['hearts', 'diamonds', 'clubs', 'spades'];
-  const values = ['ace', 2, 3, 4, 5, 6, 7, 8, 9, 10, 'jack', 'queen', 'king'];
+  const suits = ["hearts", "diamonds", "clubs", "spades"];
+  const values = ["ace", 2, 3, 4, 5, 6, 7, 8, 9, 10, "jack", "queen", "king"];
   let deck = [];
   suits.forEach((suit) => {
     values.forEach((value) => {
@@ -11,8 +11,8 @@ export const shuffleCards = (includeJokers = false) => {
     });
   });
   if (includeJokers) {
-    deck.push({ suit: 'joker', value: 1 });
-    deck.push({ suit: 'joker', value: 2 });
+    deck.push({ suit: "joker", value: 1 });
+    deck.push({ suit: "joker", value: 2 });
   }
   return deck.sort(() => Math.random() - 0.5);
 };
