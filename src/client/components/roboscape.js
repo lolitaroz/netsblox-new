@@ -12,11 +12,11 @@ const FeatureCard = ({ feature }) => (
       </p>
       <div className="justify-self-center">
         <a href={feature.href}>
-        <button
-          className={`w-full md:w-auto text-lg px-6 py-3 bg-gradient-to-r ${feature.color} text-white font-bold rounded-full transition-all duration-300 transform hover:scale-105`}
-        >
-          {feature.buttonText}
-        </button>
+          <button
+            className={`w-full md:w-auto text-lg px-6 py-3 bg-gradient-to-r ${feature.color} text-white font-bold rounded-full transition-all duration-300 transform hover:scale-105`}
+          >
+            {feature.buttonText}
+          </button>
         </a>
       </div>
     </div>
@@ -43,7 +43,7 @@ const RoboScapePage = () => {
       buttonText: "Explore Virtual Robots!",
       color:
         "from-green-400 to-blue-500 hover:from-blue-500 hover:to-green-400",
-        href: "/roboscape/online",
+      href: "/roboscape/online",
     },
     {
       title: "RoboScape Learning Journey",
@@ -53,7 +53,7 @@ const RoboScapePage = () => {
       buttonText: "Start Your Robot Adventure!",
       color:
         "from-yellow-400 to-orange-500 hover:from-orange-500 hover:to-yellow-400",
-        href: "/roboscape/curriculum",
+      href: "/roboscape/curriculum",
     },
   ];
 

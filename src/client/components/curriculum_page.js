@@ -32,11 +32,11 @@ const CurriculumCard = ({ program }) => (
         {program.description}
       </p>
       <a href={program.href}>
-      <button
-        className={`text-white bg-gradient-to-r ${program.color} hover:scale-105 transition-transform duration-300 w-full rounded-2xl`}
-      >
-        {program.buttonText}
-      </button>
+        <button
+          className={`text-white bg-gradient-to-r ${program.color} hover:scale-105 transition-transform duration-300 w-full rounded-2xl`}
+        >
+          {program.buttonText}
+        </button>
       </a>
     </div>
   </div>
@@ -66,13 +66,27 @@ const CurriculumPage = () => {
       title: "CS Frontiers",
       icon: GraduationCap,
       description: (
-          <>
-        "A Tennessee-approved, year-long high school curriculum covering advanced topics like
-            <a href="https://csfrontiers.org/distributed-computing.html">distributed computing</a>,
-            <a href="https://csfrontiers.org/iot-and-cybersecurity.html">IoT and Cybersecurity</a>,
-            <a href="https://csfrontiers.org/ai-and-machine-learning.html">AI and Machine Learning</a>,
-            and <a href="https://csfrontiers.org/software-engineering.html">software engineering</a>."
-          </>),
+        <>
+          "A Tennessee-approved, year-long high school curriculum covering
+          advanced topics like
+          <a href="https://csfrontiers.org/distributed-computing.html">
+            distributed computing
+          </a>
+          ,
+          <a href="https://csfrontiers.org/iot-and-cybersecurity.html">
+            IoT and Cybersecurity
+          </a>
+          ,
+          <a href="https://csfrontiers.org/ai-and-machine-learning.html">
+            AI and Machine Learning
+          </a>
+          , and{" "}
+          <a href="https://csfrontiers.org/software-engineering.html">
+            software engineering
+          </a>
+          ."
+        </>
+      ),
       color: "from-yellow-400 to-orange-500",
       href: "https://csfrontiers.org/curriculum.html",
       buttonText: "Discover CS Frontiers",
