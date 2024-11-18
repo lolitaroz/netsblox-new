@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Cpu, Globe, Book } from "lucide-react";
 
 const FeatureCard = ({ feature }) => (
@@ -11,11 +11,13 @@ const FeatureCard = ({ feature }) => (
         {feature.description}
       </p>
       <div className="justify-self-center">
+        <a href={feature.href}>
         <button
           className={`w-full md:w-auto text-lg px-6 py-3 bg-gradient-to-r ${feature.color} text-white font-bold rounded-full transition-all duration-300 transform hover:scale-105`}
         >
           {feature.buttonText}
         </button>
+        </a>
       </div>
     </div>
   </div>
@@ -31,6 +33,7 @@ const RoboScapePage = () => {
       buttonText: "Discover RoboScape Magic!",
       color:
         "from-purple-400 to-pink-500 hover:from-pink-500 hover:to-purple-400",
+      href: "/roboscape/info",
     },
     {
       title: "RoboScape Online",
@@ -40,6 +43,7 @@ const RoboScapePage = () => {
       buttonText: "Explore Virtual Robots!",
       color:
         "from-green-400 to-blue-500 hover:from-blue-500 hover:to-green-400",
+        href: "/roboscape/online",
     },
     {
       title: "RoboScape Learning Journey",
@@ -49,6 +53,7 @@ const RoboScapePage = () => {
       buttonText: "Start Your Robot Adventure!",
       color:
         "from-yellow-400 to-orange-500 hover:from-orange-500 hover:to-yellow-400",
+        href: "/roboscape/curriculum",
     },
   ];
 

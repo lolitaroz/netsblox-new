@@ -17,6 +17,12 @@ import PyBloxPage from "./components/pyblox.js";
 import RoboScapePage from "./components/roboscape.js";
 import LearnPage from "./components/learn_page.js";
 import Beatblox from "./components/beatblox.js";
+import Roccem from "./components/roccem.js";
+import WildlifePage from "./components/wildlife.js";
+import AICamp from "./components/ai_camp.js";
+import RoboScapeInfo from "./components/roboscape_info.js";
+import RoboScapeOnline from "./components/roboscape_online.js";
+import RoboScapeCurriculum from "./components/roboscape_curriculum.js";
 
 /***
  * Main application entry point
@@ -48,9 +54,15 @@ const MyApp = () => {
         <Route path="/multiplayer" element={<MultiplayerPage />} />
         <Route path="/pyblox" element={<PyBloxPage />} />
         <Route path="/roboscape" element={<RoboScapePage />} />
+        <Route path="/roboscape/info" element={<RoboScapeInfo />} />
+        <Route path="/roboscape/online" element={<RoboScapeOnline />} />
+        <Route path="/roboscape/curriculum" element={<RoboScapeCurriculum />} />
         <Route path="/learn" element={<LearnPage />} />
         <Route path="/beatblox" element={<Beatblox />} />
         <Route path="/projects" element={<Projects />} />
+        <Route path="/roccem" element={<Roccem />} />
+        <Route path="/wildlife" element={<WildlifePage />} />
+        <Route path="/aicamp" element={<AICamp />} />
       </Routes>
       <Footer />
     </BrowserRouter>
