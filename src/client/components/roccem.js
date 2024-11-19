@@ -83,13 +83,28 @@ export default function Roccem() {
                   introduces students to robotics, cybersecurity, and advanced
                   computer science concepts without the text-based programming
                   hurdle. The work is based on a previous effort targeting high
-                  school students using physical robots as described in this
-                  paper. To avoid dependence on physical hardware, we use a 3D
+                  school students using physical robots as described in
+                  <a
+                    className="text-blue-500 hover:text-blue-600"
+                    href="https://dl.acm.org/doi/pdf/10.1145/3287324.3287450"
+                  >
+                    {" "}
+                    this paper
+                  </a>
+                  . To avoid dependence on physical hardware, we use a 3D
                   robotic simulation environment, called RoboScape Online (RO).
-                  An overview is provided in this paper. The intuitive design
-                  and public accessibility of NetsBlox and RO enable educators
-                  to utilize the curriculum with virtually no hurdles. The
-                  9-week long ROCCEM curriculum is divided into four modules:
+                  An overview is provided in
+                  <a
+                    className="text-blue-500 hover:text-blue-600"
+                    href="https://www.frontiersin.org/journals/computer-science/articles/10.3389/fcomp.2022.1031572/full"
+                  >
+                    {" "}
+                    this paper
+                  </a>
+                  . The intuitive design and public accessibility of NetsBlox
+                  and RO enable educators to utilize the curriculum with
+                  virtually no hurdles. The 9-week long ROCCEM curriculum is
+                  divided into four modules:
                 </p>
               </div>
             </div>

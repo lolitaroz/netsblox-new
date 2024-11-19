@@ -132,18 +132,7 @@ const LearnPage = () => {
       icon: Book,
       description:
         "Check out the comprehensive documentation for NetsBlox including walkthroughs, documentation for all RPCs, custom deployment, and more!",
-      links: [
-        {
-          title: "Snap! Manual",
-          url: "https://snap.berkeley.edu/snap/help/SnapManual.pdf",
-          icon: BookOpen,
-        },
-        {
-          title: "Flyer",
-          url: "https://netsblox.org/documents/NetsBloxFlyer.pdf",
-          icon: Newspaper,
-        },
-      ],
+      links: [],
       buttonText: "Read More",
       buttonLink: "https://editor.netsblox.org/docs/",
     },
@@ -215,6 +204,7 @@ const LearnPage = () => {
         },
       ],
       buttonText: "View",
+      buttonLink: "/tutorials", //TODO
     },
     {
       title: "Documents",
@@ -224,54 +214,103 @@ const LearnPage = () => {
         {
           title:
             "Removing the Walls Around Visual Educational Programming Environments",
-          url: "#",
+          url: "/documents/removing_the_walls.pdf",
           icon: Laptop,
         },
         {
           title:
             "A Visual Programming Environment for Introducing Distributed Computing",
-          url: "#",
+          url: "/documents/NetsBlox_JPDC.pdf",
           icon: Globe,
         },
         {
           title: "Enabling Collaborative Distance Robotics Education",
-          url: "#",
+          url: "/documents/RoboScape_Online_VLHCC_2021.pdf",
           icon: Bot,
         },
         {
           title: "Your Phone as a Sensor: Making IoT Accessible",
-          url: "#",
+          url: "/documents/PhoneIoT-your-phone-as-a-sensor.pdf",
           icon: Smartphone,
         },
         {
           title: "Teaching Cybersecurity with Networked Robots",
-          url: "#",
+          url: "/documents/cybersec_with_networked_robots.pdf",
           icon: Shield,
         },
         {
           title: "Broadening Participation in Computing",
-          url: "#",
+          url: "/documents/Ledeczi-ITEST-PI-Mtg.pdf",
           icon: Users,
         },
-        { title: "CSTA19: Session | Workshop", url: "#", icon: Users },
+        {
+          title: "CSTA19: Session",
+          url: "/documents/CSTA-2019-Session.pptx",
+          icon: Users,
+        },
+        {
+          title: "CSTA19: Workshop",
+          url: "/documents/CSTA-2019-Workshop.pptx",
+          icon: Users,
+        },
+
+        {
+          title: "Snap! Manual",
+          url: "https://snap.berkeley.edu/snap/help/SnapManual.pdf",
+          icon: BookOpen,
+        },
+        {
+          title: "Flyer",
+          url: "/documents/NetsBloxFlyer.pdf",
+          icon: Newspaper,
+        },
       ],
       buttonText: "View All",
+      buttonLink: "/documents", //TODO
     },
     {
       title: "For Educators",
       icon: GraduationCap,
       description: "Find NetsBlox lesson plans here in this section.",
       links: [
-        { title: "Map and Weather", url: "#", icon: Globe },
-        { title: "Intro to Plotting", url: "#", icon: BarChart2 },
-        { title: "Plotting Climate Change data", url: "#", icon: Cloud },
-        { title: "Plotting COVID-19 data", url: "#", icon: BarChart2 },
-        { title: "Movies", url: "#", icon: Video },
-        { title: "Texting app", url: "#", icon: MessageSquare },
-        { title: "Chatroom app", url: "#", icon: MessageSquare },
+        {
+          title: "Map and Weather",
+          url: "/documents/NetsBloxLessonMapandWeather.pdf",
+          icon: Globe,
+        },
+        {
+          title: "Intro to Plotting",
+          url: "/documents/NetsBloxLessonPlotting.pdf",
+          icon: BarChart2,
+        },
+        {
+          title: "Plotting Climate Change data",
+          url: "/documents/NetsBloxLessonIceCore.pdf",
+          icon: Cloud,
+        },
+        {
+          title: "Plotting COVID-19 data",
+          url: "/documents/NetsBloxLessonCOVID-19.pdf",
+          icon: BarChart2,
+        },
+        {
+          title: "Movies",
+          url: "/documents/NetsBloxLessonListsandMovies.pdf",
+          icon: Video,
+        },
+        {
+          title: "Texting app",
+          url: "/documents/NetsBloxLessonTexting.pdf",
+          icon: MessageSquare,
+        },
+        {
+          title: "Chatroom app",
+          url: "/documents/NetsBloxLessonChat.pdf",
+          icon: MessageSquare,
+        },
         {
           title: "Multi-player game",
-          url: "#",
+          url: "/documents/NetsBloxLessonMulti-PlayerGames.pdf",
           icon: Gamepad,
           isMultiplayer: true,
         },

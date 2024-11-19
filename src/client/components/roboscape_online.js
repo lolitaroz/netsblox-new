@@ -86,7 +86,10 @@ export default function RoboScapeOnline() {
             <div className="bg-white/50 dark:bg-slate-800/50 backdrop-blur-sm p-6 rounded-lg mb-8">
               <p className="text-slate-600 dark:text-slate-300">
                 For information on getting started with RoboScape Online, see{" "}
-                <a href="#" className="text-blue-500 hover:text-blue-600">
+                <a
+                  href="https://docs.google.com/presentation/d/1iaUKDoqclTCwOBEVEZ7TKQ_ihas08rta2DIUaMPWPok/edit?usp=sharing"
+                  className="text-blue-500 hover:text-blue-600"
+                >
                   this presentation
                 </a>
                 .
@@ -103,7 +106,7 @@ export default function RoboScapeOnline() {
               <ul className="space-y-3">
                 <li>
                   <a
-                    href="#"
+                    href="/documents/RoboScape_Online_VLHCC_2021.pdf"
                     className="text-blue-500 hover:text-blue-600 flex items-center gap-2"
                   >
                     <ExternalLink className="h-4 w-4" />
@@ -113,7 +116,7 @@ export default function RoboScapeOnline() {
                 </li>
                 <li>
                   <a
-                    href="#"
+                    href="https://www.frontiersin.org/journals/computer-science/articles/10.3389/fcomp.2022.1031572/full"
                     className="text-blue-500 hover:text-blue-600 flex items-center gap-2"
                   >
                     <ExternalLink className="h-4 w-4" />

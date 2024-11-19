@@ -36,6 +36,7 @@ const VideoDemo = ({ section }) => (
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowFullScreen
         className="border-0"
+        style={{ aspectRatio: "16 / 9" }}
       />
     </div>
     <div className="text-center">
@@ -77,73 +78,64 @@ const BeatBlox = () => {
     {
       title: "Basic Music",
       icon: Music,
-      videoId: "video-id-1",
+      videoId: "YVK3ysKePc8",
       description:
         "Introduction to BeatBlox showcasing a simple block-based musical effect.",
-      projectUrl: "#",
+      projectUrl:
+        "https://editor.netsblox.org/?extensions=%5B%22https%3A%2F%2Fextensions.netsblox.org%2Fextensions%2FBeatBlox%2Findex.js%22%5D&action=present&Username=beatblox&ProjectName=beepblox&editMode&noRun",
     },
     {
       title: "Multi-Instrument",
       icon: Headphones,
-      videoId: "video-id-2",
+      videoId: "_-9BKaLxeQw",
       description:
         'Beethoven\'s "Ode to Joy" with multiple instruments and score visualization.',
-      projectUrl: "#",
+      projectUrl:
+        "https://editor.netsblox.org/?extensions=%5B%22https%3A%2F%2Fextensions.netsblox.org%2Fextensions%2FBeatBlox%2Findex.js%22%5D&action=present&Username=beatblox&ProjectName=code-to-joy&editMode&noRun",
     },
     {
       title: "Real-Time Graphics",
       icon: PlayCircle,
-      videoId: "video-id-3",
+      videoId: "t6NO8M-WykQ",
       description: "Various visualizations accompanying musical compositions.",
-      projectUrl: "#",
+      projectUrl:
+        "https://editor.netsblox.org/?extensions=%5B%22https%3A%2F%2Fextensions.netsblox.org%2Fextensions%2FBeatBlox%2Findex.js%22%5D&action=present&Username=beatblox&ProjectName=circle-viz&editMode&noRun",
     },
     {
       title: "Distributed Projects",
       icon: Share2,
-      videoId: "video-id-4",
+      videoId: "eqd-MeSWxfI",
       description:
         "A four-piece band first on a single computer and then by four individual BeatBlox users being played back synchronously.",
-      projectUrl: "#",
+      projectUrl:
+        "https://editor.netsblox.org/?extensions=%5B%22https%3A%2F%2Fextensions.netsblox.org%2Fextensions%2FBeatBlox%2Findex.js%22%5D&action=present&Username=beatblox&ProjectName=sprite-orchestra&editMode&noRun",
     },
     {
       title: "Networked Effects And Graphics",
       icon: Layers,
-      videoId: "video-id-5",
+      videoId: "m38ea6as4s0",
       description:
         "Helicopter flyby on a single computer first, then in three separate browser tabs, and finally, using distributed audiovisual animation across three computers showing a helicopter moving both visually and acoustically between individually running programs.",
-      projectUrl: "#",
+      projectUrl:
+        "https://editor.netsblox.org/?extensions=%5B%22https%3A%2F%2Fextensions.netsblox.org%2Fextensions%2FBeatBlox%2Findex.js%22%5D&action=present&Username=beatblox&ProjectName=helicopter&editMode&noRun",
     },
     {
       title: "External Device Access",
       icon: PenTool,
-      videoId: "video-id-6",
+      videoId: "HXxqptj6w0Q",
       description:
         "Musical compositions demonstrating ease of access to external devices, such as MIDI keyboards and mobile phones. To try maracas on your phone, you need to install the PhoneIoT mobile app from the app store and then scan the QR code as shown in the video.",
-      projectUrl: "#",
-    },
-    {
-      title: "Open Accessibility and Tinkering",
-      icon: Headphones,
-      videoId: "video-id-7",
-      description:
-        "End-to-end demonstration of importing a public domain MIDI song into BeatBlox, changing its key and tempo, and exporting the resulting audio to a file.",
-      projectUrl: "#",
+      projectUrl:
+        "https://editor.netsblox.org/?extensions=%5B%22https%3A%2F%2Fextensions.netsblox.org%2Fextensions%2FBeatBlox%2Findex.js%22%2C%22https%3A%2F%2Fextensions.netsblox.org%2Fextensions%2FBetterShare%2Findex.js%22%5D&action=present&Username=beatblox&ProjectName=phoneiot-maraca&editMode&noRun",
     },
     {
       title: "Augmented Reality",
       icon: Music,
-      videoId: "video-id-8",
+      videoId: "ymLOQZyKuWc",
       description:
         "Two hardware-free instrument implementations allowing users to experiment with playing music without requiring physical hardware or instruments using a webcam only.",
-      projectUrl: "#",
-    },
-    {
-      title: "Curricular Tasks",
-      icon: Users,
-      videoId: "video-id-9",
-      description:
-        "Sample curricular module with a simple built-in task with integrated assessment and the ability for teachers to examine the process not just the end result.",
-      projectUrl: "#",
+      projectUrl:
+        "https://editor.netsblox.org/?extensions=%5B%22https%3A%2F%2Fextensions.netsblox.org%2Fextensions%2FAugmentedReality%2Findex.js%22%2C%22https%3A%2F%2Fextensions.netsblox.org%2Fextensions%2FBeatBlox%2Findex.js%22%2C%22https%3A%2F%2Fextensions.netsblox.org%2Fextensions%2FHandGestures%2Findex.js%22%5D&action=present&Username=beatblox&ProjectName=theremin&editMode&noRun",
     },
   ];
 
@@ -178,10 +170,23 @@ const BeatBlox = () => {
                 of Things, and cybersecurity to novices. It opens the internet
                 to student projects, making computing more relevant to their
                 lives and more engaging. A modular, full year, high school
-                curriculum called Computer Science Frontiers (CSF) utilizes
-                NetsBlox and is freely available to teachers to bring these
-                capabilities to their classrooms. A new online course can help
-                both students and teachers learn NetsBlox from the ground up.
+                curriculum called{" "}
+                <a
+                  className="text-blue-500 hover:text-blue-600"
+                  href="https://csfrontiers.org/"
+                >
+                  Computer Science Frontiers (CSF)
+                </a>{" "}
+                utilizes NetsBlox and is freely available to teachers to bring
+                these capabilities to their classrooms. A{" "}
+                <a
+                  className="text-blue-500 hover:text-blue-600"
+                  href="https://www.coursera.org/learn/programming-for-a-networked-world/"
+                >
+                  new online course
+                </a>{" "}
+                can help both students and teachers learn NetsBlox from the
+                ground up.
               </p>
             </div>
 
@@ -201,7 +206,7 @@ const BeatBlox = () => {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
               {demoSections.map((section, index) => (
                 <VideoDemo key={index} section={section} />
               ))}

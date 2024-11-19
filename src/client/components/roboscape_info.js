@@ -87,7 +87,10 @@ export default function RoboScapeInfo() {
                   <Bot className="h-5 w-5 text-blue-600 mt-1" />
                   <span className="text-slate-600 dark:text-slate-300">
                     RoboScape supported robots: Parallax ActivityBot 360 (
-                    <a href="#" className="text-blue-500 hover:text-blue-600">
+                    <a
+                      href="https://docs.google.com/document/d/1wudv0uNGX6zZxWaxV_bao0XyJYQgYNlu1Z-zYzvuRPA/edit?usp=sharing"
+                      className="text-blue-500 hover:text-blue-600"
+                    >
                       Assembly Instructions
                     </a>
                     )
@@ -114,7 +117,7 @@ export default function RoboScapeInfo() {
               <ul className="space-y-3">
                 <li>
                   <a
-                    href="#"
+                    href="/documents/cybersec_with_networked_robots.pdf"
                     className="text-blue-500 hover:text-blue-600 flex items-center gap-2"
                   >
                     <ExternalLink className="h-4 w-4" />
@@ -123,7 +126,7 @@ export default function RoboScapeInfo() {
                 </li>
                 <li>
                   <a
-                    href="#"
+                    href="/documents/cybersec_curriculum_robotics.pdf"
                     className="text-blue-500 hover:text-blue-600 flex items-center gap-2"
                   >
                     <ExternalLink className="h-4 w-4" />A Hands-On Cybersecurity

@@ -1,48 +1,44 @@
-import React, { useState } from "react";
+import React from "react";
 
 const featuredProjects = [
   {
     title: "ThingSpeak",
-    image: "/placeholder.svg?height=400&width=600",
+    src: "https://editor.netsblox.org/?action=example&ProjectName=Thingspeak&appMode=true&embedMode=true&noRun",
     description: "Data visualization and analysis platform",
+    href: "https://editor.netsblox.org/?action=example&ProjectName=Thingspeak",
   },
   {
     title: "NASA",
-    image: "/placeholder.svg?height=400&width=600",
+    src: "https://editor.netsblox.org/?action=example&ProjectName=NASA&appMode=true&embedMode=true&noRun",
     description: "Space exploration and astronomical data",
+    href: "https://editor.netsblox.org/?action=example&ProjectName=NASA",
   },
   {
     title: "CastShow",
-    image: "/placeholder.svg?height=400&width=600",
+    src: "https://editor.netsblox.org/?action=example&ProjectName=CastShow&appMode=true&embedMode=true&noRun",
     description: "Interactive media presentation platform",
-  },
-  {
-    title: "MyStarMap",
-    image: "/placeholder.svg?height=400&width=600",
-    description: "Interactive astronomical mapping",
+    href: "https://editor.netsblox.org/?action=example&ProjectName=CastShow",
   },
 ];
 
 const mapProjects = [
   {
     title: "QuickQuake",
-    image: "/placeholder.svg?height=400&width=600",
+    src: "https://editor.netsblox.org/?action=example&ProjectName=QuickQuake&appMode=true&embedMode=true&noRun",
     description: "Real-time earthquake visualization",
-  },
-  {
-    title: "WeatherMap",
-    image: "/placeholder.svg?height=400&width=600",
-    description: "Interactive weather mapping system",
+    href: "https://editor.netsblox.org/?action=example&ProjectName=QuickQuake",
   },
   {
     title: "Traffic",
-    image: "/placeholder.svg?height=400&width=600",
+    src: "https://editor.netsblox.org/?action=example&ProjectName=Traffic&appMode=true&embedMode=true&noRun",
     description: "Real-time traffic monitoring",
+    href: "https://editor.netsblox.org/?action=example&ProjectName=Traffic",
   },
   {
     title: "COVID19Daily",
-    image: "/placeholder.svg?height=400&width=600",
+    src: "https://editor.netsblox.org/?action=example&ProjectName=COVID-19Daily&appMode=true&embedMode=true&noRun",
     description: "COVID-19 case tracking and visualization",
+    href: "https://editor.netsblox.org/?action=example&ProjectName=COVID-19Daily",
   },
 ];
 
@@ -72,20 +68,19 @@ export default function Projects() {
             <h2 className="text-3xl font-bold mb-8 text-blue-600 dark:text-white">
               Featured Projects
             </h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="flex flex-wrap gap-6 justify-center rounded-lg columns-2">
               {featuredProjects.map((project, index) => (
                 <div
                   key={index}
-                  className="group relative bg-white dark:bg-slate-800 transition-all duration-300 hover:shadow-xl overflow-hidden"
+                  className="flex flex-col rounded-lg items-center bg-white dark:bg-slate-800 transition-all duration-300 hover:shadow-xl overflow-hidden min-w-[300px] max-w-[400px] flex-1"
                 >
-                  <div className="p-0">
-                    <div className="relative h-48 w-full">
-                      <img
-                        src={project.image}
-                        alt={project.title}
-                        className="object-cover transition-transform duration-300 group-hover:scale-105 w-full h-full"
-                      />
-                    </div>
+                  <iframe
+                    src={project.src}
+                    title={project.title}
+                    className="w-full h-64"
+                    allowFullScreen
+                  ></iframe>
+                  <a href={project.href}>
                     <div className="p-4">
                       <h3 className="text-xl font-bold text-blue-600 dark:text-white mb-2">
                         {project.title}
@@ -94,10 +89,7 @@ export default function Projects() {
                         {project.description}
                       </p>
                     </div>
-                    <button className="absolute bottom-4 left-4 right-4 bg-gradient-to-r from-pink-500 to-purple-500 text-white font-bold py-2 rounded-full opacity-0 transform translate-y-4 transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-0">
-                      Let's Play!
-                    </button>
-                  </div>
+                  </a>
                 </div>
               ))}
             </div>
@@ -107,31 +99,25 @@ export default function Projects() {
             <h2 className="text-3xl font-bold mb-8 text-blue-600 dark:text-white">
               Projects using Google Maps
             </h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="flex flex-wrap gap-6 justify-center rounded-lg  columns-2">
               {mapProjects.map((project, index) => (
                 <div
                   key={index}
-                  className="group relative bg-white dark:bg-slate-800 transition-all duration-300 hover:shadow-xl overflow-hidden"
+                  className="flex flex-col items-center rounded-lg bg-white dark:bg-slate-800 transition-all duration-300 hover:shadow-xl overflow-hidden min-w-[300px] max-w-[400px] flex-1"
                 >
-                  <div className="p-0">
-                    <div className="relative h-48 w-full">
-                      <img
-                        src={project.image}
-                        alt={project.title}
-                        className="object-cover transition-transform duration-300 group-hover:scale-105 w-full h-full"
-                      />
-                    </div>
-                    <div className="p-4">
-                      <h3 className="text-xl font-bold text-blue-600 dark:text-white mb-2">
-                        {project.title}
-                      </h3>
-                      <p className="text-sm text-slate-600 dark:text-slate-300">
-                        {project.description}
-                      </p>
-                    </div>
-                    <button className="absolute bottom-4 left-4 right-4 opacity-0 transform translate-y-4 transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-0">
-                      View Project
-                    </button>
+                  <iframe
+                    src={project.src}
+                    title={project.title}
+                    className="w-full h-64"
+                    allowFullScreen
+                  ></iframe>
+                  <div className="p-4">
+                    <h3 className="text-xl font-bold text-blue-600 dark:text-white mb-2">
+                      {project.title}
+                    </h3>
+                    <p className="text-sm text-slate-600 dark:text-slate-300">
+                      {project.description}
+                    </p>
                   </div>
                 </div>
               ))}

@@ -41,7 +41,7 @@ const MultiplayerPage = () => {
       title: "Sign in",
       content:
         "Before playing multiplayer games, all the players need to be signed up and logged in. Detailed sign up information can be found",
-      link: "#",
+      link: "https://editor.netsblox.org/docs/fundamentals/howto.html#signing-up-in",
       linkText: "here",
       color: "from-blue-400 to-cyan-500",
     },

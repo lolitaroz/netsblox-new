@@ -23,6 +23,7 @@ import AICamp from "./components/ai_camp.js";
 import RoboScapeInfo from "./components/roboscape_info.js";
 import RoboScapeOnline from "./components/roboscape_online.js";
 import RoboScapeCurriculum from "./components/roboscape_curriculum.js";
+import ContactPage from "./components/contact_us.js";
 
 /***
  * Main application entry point
@@ -63,6 +64,7 @@ const MyApp = () => {
         <Route path="/roccem" element={<Roccem />} />
         <Route path="/wildlife" element={<WildlifePage />} />
         <Route path="/aicamp" element={<AICamp />} />
+        <Route path="/contact" element={<ContactPage />} />
       </Routes>
       <Footer />
     </BrowserRouter>

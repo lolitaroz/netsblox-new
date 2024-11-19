@@ -1,44 +1,19 @@
 import React from "react";
-import { Code, Zap, Puzzle, Share2, Laptop } from "lucide-react";
-import { FeatureCard } from "./feature_card.js";
+import { Code, Play, BookOpen, Download } from "lucide-react";
 
-const PyBloxPage = () => {
+export default function PyBloxPage() {
   const features = [
-    {
-      title: "Python Integration",
-      icon: Code,
-      description:
-        "Use the power of Python within NetsBlox! Write Python code and seamlessly integrate it with your NetsBlox projects.",
-      color: "from-blue-400 to-cyan-500",
-    },
-    {
-      title: "Advanced Capabilities",
-      icon: Zap,
-      description:
-        "Unlock advanced features and libraries in Python to create more complex and powerful projects in NetsBlox.",
-      color: "from-purple-400 to-pink-500",
-    },
-    {
-      title: "Easy to Learn",
-      icon: Puzzle,
-      description:
-        "PyBlox makes it simple to transition from block-based programming to text-based Python coding, perfect for learners of all levels.",
-      color: "from-green-400 to-emerald-500",
-    },
-    {
-      title: "Collaborative Coding",
-      icon: Share2,
-      description:
-        "Work on Python projects together in real-time, sharing code and ideas with classmates and friends.",
-      color: "from-yellow-400 to-orange-500",
-    },
-    {
-      title: "Cross-Platform",
-      icon: Laptop,
-      description:
-        "Use PyBlox on any device with a web browser, making it easy to code at school, home, or on the go.",
-      color: "from-red-400 to-rose-500",
-    },
+    "Create NetsBlox projects using Python",
+    "Access to all NetsBlox blocks and RPCs",
+    "Easy integration with other Python libraries",
+    "Suitable for both beginners and advanced users",
+  ];
+
+  const benefits = [
+    "Combine the power of Python with NetsBlox",
+    "Automate NetsBlox project creation",
+    "Perfect for data science and AI projects",
+    "Expand your coding skills",
   ];
 
   return (
@@ -46,51 +21,101 @@ const PyBloxPage = () => {
       <div className="min-h-screen bg-gradient-to-b from-white to-blue-50 dark:from-slate-900 dark:to-slate-800">
         <main className="container mx-auto px-4 py-12">
           <div className="max-w-4xl mx-auto">
-            <h1 className="text-4xl text-center font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-blue-700 dark:from-blue-400 dark:to-blue-600">
-              PyBlox: Unleash the Power of Python in NetsBlox!
-            </h1>
+            <div className="flex items-center justify-center gap-3 mb-6">
+              <Code className="h-8 w-8 text-blue-600" />
+              <h1 className="text-4xl font-bold text-center text-blue-600 dark:text-white">
+                PyBlox
+              </h1>
+            </div>
 
-            <div className="bg-white dark:bg-slate-800 rounded-xl p-6 shadow-lg mb-12">
-              <p className="text-lg text-slate-600 dark:text-slate-300 mb-6">
-                Welcome to PyBlox, the exciting new feature that brings Python
-                programming to NetsBlox! With PyBlox, you can combine the ease
-                of block-based programming with the power and flexibility of
-                Python. Whether you're a beginner or an experienced coder,
-                PyBlox opens up a world of possibilities for your projects!
+            <div className="bg-white/50 dark:bg-slate-800/50 backdrop-blur-sm p-6 rounded-lg shadow-md mb-8">
+              <p className="text-lg text-center text-slate-600 dark:text-slate-300">
+                PyBlox is a Python library that allows you to create NetsBlox
+                projects programmatically.
               </p>
-              <button className="w-full md:w-auto text-lg px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 hover:from-purple-600 hover:to-blue-500 text-white font-bold rounded-full transition-all duration-300 transform hover:scale-105">
-                Start Coding with PyBlox!
-              </button>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-              {features.map((feature, index) => (
-                <FeatureCard key={index} feature={feature} />
-              ))}
+            <div className="grid md:grid-cols-2 gap-8 mb-12">
+              <div className="bg-white/50 dark:bg-slate-800/50 backdrop-blur-sm p-6 rounded-lg shadow-md">
+                <h2 className="text-xl font-bold mb-4">Features</h2>
+                <ul className="space-y-2">
+                  {features.map((feature, index) => (
+                    <li
+                      key={index}
+                      className="text-slate-600 dark:text-slate-300"
+                    >
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div className="bg-white/50 dark:bg-slate-800/50 backdrop-blur-sm p-6 rounded-lg shadow-md">
+                <h2 className="text-xl font-bold mb-4">Benefits</h2>
+                <ul className="space-y-2">
+                  {benefits.map((benefit, index) => (
+                    <li
+                      key={index}
+                      className="text-slate-600 dark:text-slate-300"
+                    >
+                      {benefit}
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
 
-            <div className="rounded-xl overflow-hidden shadow-lg mb-12">
-              <iframe
-                width="100%"
-                height="315"
-                src="https://www.youtube.com/embed/your-pyblox-video-id"
-                title="Introduction to PyBlox"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-                className="border-0"
-              />
-            </div>
-
-            <div className="text-center">
-              <h2 className="text-2xl font-bold mb-4 text-blue-600 dark:text-white">
-                Ready to Start Your Python Adventure?
+            <div className="bg-white/50 dark:bg-slate-800/50 backdrop-blur-sm p-6 rounded-lg shadow-md mb-12">
+              <h2 className="text-xl font-bold text-center mb-4">
+                PyBlox in Action
               </h2>
-              <p className="text-lg text-slate-600 dark:text-slate-300 mb-6">
-                Join the PyBlox community and start creating amazing projects
-                with Python in NetsBlox today!
-              </p>
-              <button className="text-lg px-8 py-3 bg-gradient-to-r from-green-400 to-blue-500 hover:from-blue-500 hover:to-green-400 text-white font-bold rounded-full transition-all duration-300 transform hover:scale-105">
-                Get Started with PyBlox
+              <div className="grid md:grid-cols-2 gap-8">
+                <div className="space-y-2">
+                  <h3 className="text-lg font-semibold text-slate-800 dark:text-slate-200">
+                    Python Tools for Snap
+                  </h3>
+                  <div className="aspect-video">
+                    <iframe
+                      width="100%"
+                      height="100%"
+                      src="https://www.youtube.com/embed/your-video-id-1"
+                      title="Python Tools for Snap"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                      className="rounded-lg shadow-lg"
+                    ></iframe>
+                  </div>
+                </div>
+                <div className="space-y-2">
+                  <h3 className="text-lg font-semibold text-slate-800 dark:text-slate-200">
+                    PyBlox Teaser with Snap
+                  </h3>
+                  <div className="aspect-video">
+                    <iframe
+                      width="100%"
+                      height="100%"
+                      src="https://www.youtube.com/embed/your-video-id-2"
+                      title="PyBlox Teaser with Snap"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                      className="rounded-lg shadow-lg"
+                    ></iframe>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="flex justify-center gap-4">
+              <button className="flex items-center gap-2 px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+                <Play className="h-4 w-4" />
+                Try PyBlox
+              </button>
+              <button className="flex items-center gap-2 px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-blue-600 bg-white hover:bg-blue-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+                <BookOpen className="h-4 w-4" />
+                Documentation
+              </button>
+              <button className="flex items-center gap-2 px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-blue-600 bg-white hover:bg-blue-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+                <Download className="h-4 w-4" />
+                Download
               </button>
             </div>
           </div>
@@ -98,6 +123,4 @@ const PyBloxPage = () => {
       </div>
     </div>
   );
-};
-
-export default PyBloxPage;
+}
