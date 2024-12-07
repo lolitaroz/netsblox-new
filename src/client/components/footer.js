@@ -35,14 +35,6 @@ export const Footer = () => {
                   Tutorials
                 </a>
               </li>
-              <li>
-                <a
-                  href="/community"
-                  className="hover:text-blue-500 dark:hover:text-blue-400 transition-colors"
-                >
-                  FAQ
-                </a>
-              </li>
             </ul>
           </div>
           <div>
@@ -52,15 +44,15 @@ export const Footer = () => {
             <ul className="space-y-2">
               <li>
                 <a
-                  href="#"
+                  href="https://www.facebook.com/netsblox"
                   className="hover:text-blue-500 dark:hover:text-blue-400 transition-colors"
                 >
-                  Twitter
+                  Facebook
                 </a>
               </li>
               <li>
                 <a
-                  href="#"
+                  href="https://github.com/netsblox"
                   className="hover:text-blue-500 dark:hover:text-blue-400 transition-colors"
                 >
                   GitHub
@@ -68,7 +60,7 @@ export const Footer = () => {
               </li>
               <li>
                 <a
-                  href="/community"
+                  href="/contact"
                   className="hover:text-blue-500 dark:hover:text-blue-400 transition-colors"
                 >
                   Contact Us
@@ -78,7 +70,7 @@ export const Footer = () => {
           </div>
         </div>
         <div className="mt-8 text-center">
-          <p>&copy; 2023 NetsBlox. All rights reserved.</p>
+          <p>&copy; 2024 Institute for Software Integrated Systems / Vanderbilt University / School of Engineering</p>
         </div>
       </div>
     </footer>

@@ -3,8 +3,8 @@ import { Sun, Moon, Menu, X, ChevronDown } from "lucide-react";
 
 const navItems = [
   { name: "Home", href: "/" },
-  { name: "Learn", href: "/learn" },
-  { name: "Teach", href: "/curriculum" },
+  { name: "Resources", href: "/learn" },
+  { name: "For Teachers", href: "/curriculum" },
   { name: "Multiplayer", href: "/multiplayer" },
   { name: "Projects", href: "/projects" },
   {

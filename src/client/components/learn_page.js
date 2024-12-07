@@ -66,11 +66,12 @@ const ResourceCard = ({ section }) => (
           </li>
         ))}
       </ul>
+      {section.buttonText && (
       <a href={section.buttonLink} className="w-full mt-auto">
         <button className="w-full bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 rounded-2xl transition-transform duration-300 transform hover:scale-105 mt-auto">
           {section.buttonText}
         </button>
-      </a>
+      </a>)}
     </div>
   </div>
 );
@@ -265,8 +266,6 @@ const LearnPage = () => {
           icon: Newspaper,
         },
       ],
-      buttonText: "View All",
-      buttonLink: "/documents", //TODO
     },
     {
       title: "For Educators",

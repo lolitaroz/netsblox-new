@@ -51,7 +51,7 @@ export default function Projects() {
             Projects
           </h1>
           <div className="max-w-3xl mx-auto text-center mb-16">
-            <p className="text-lg text-slate-600 dark:text-slate-300">
+            <p className="text-lg text-slate-600 dark:text-slate-300 p-4">
               Our projects offer collaborative editing in a cloud-based
               environment, allowing novice programmers to create networked
               programs like multiplayer games. NetsBlox enables real-world data

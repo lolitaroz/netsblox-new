@@ -136,6 +136,7 @@ export default function RoboScapeOnline() {
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
                 className="border-0"
+                style={{ aspectRatio: "16 / 9" }}
               />
             </div>
           </div>

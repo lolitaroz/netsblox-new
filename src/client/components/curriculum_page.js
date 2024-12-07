@@ -33,7 +33,7 @@ const CurriculumCard = ({ program }) => (
       </p>
       <a href={program.href}>
         <button
-          className={`text-white bg-gradient-to-r ${program.color} hover:scale-105 transition-transform duration-300 w-full rounded-2xl`}
+          className={`text-white text-lg font-bold bg-gradient-to-r ${program.color} hover:scale-105 transition-transform duration-300 w-full rounded-2xl`}
         >
           {program.buttonText}
         </button>

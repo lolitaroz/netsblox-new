@@ -32,7 +32,7 @@ export default function RoboScapeCurriculum() {
                 their cyber attacks and defenses hold up.
               </p>
               <a
-                href="#"
+                href="/roboscape/curriculum/cybersecurity"
                 className="text-blue-500 hover:text-blue-600 inline-flex items-center gap-2"
               >
                 <ExternalLink className="h-4 w-4" />

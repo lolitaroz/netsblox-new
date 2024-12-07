@@ -24,6 +24,7 @@ import RoboScapeInfo from "./components/roboscape_info.js";
 import RoboScapeOnline from "./components/roboscape_online.js";
 import RoboScapeCurriculum from "./components/roboscape_curriculum.js";
 import ContactPage from "./components/contact_us.js";
+import RoboScapeCyberSec from "./components/roboscape_cybersec.js";
 
 /***
  * Main application entry point
@@ -58,6 +59,7 @@ const MyApp = () => {
         <Route path="/roboscape/info" element={<RoboScapeInfo />} />
         <Route path="/roboscape/online" element={<RoboScapeOnline />} />
         <Route path="/roboscape/curriculum" element={<RoboScapeCurriculum />} />
+        <Route path="/roboscape/curriculum/cybersecurity" element={<RoboScapeCyberSec />} />
         <Route path="/learn" element={<LearnPage />} />
         <Route path="/beatblox" element={<Beatblox />} />
         <Route path="/projects" element={<Projects />} />
